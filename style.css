@@ -1,0 +1,652 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Cream:hsl(30, 38%, 92%);
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White:hsl(0, 0%, 100%);
+
+
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Cream);
+}
+
+#main{
+    width: 640px;
+    height: 480px;
+    background-color: var(--White);
+    display: flex;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+#boxleft{
+    width: 50%;
+    height: 100%;
+    background-image: url(images/image-product-desktop.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#boxright{
+    width: 50%;
+    height: 100%;
+    background-color: var(--White);
+}
+
+#textBox{
+    padding: 25px 35px;
+    & h3{
+        font-family: "Red Hat Display", sans-serif; 
+        color: var(--Darkgrayishblue);
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 14px;
+        opacity: 0.8;
+    }
+
+    & h1{
+        line-height: 35px;
+        font-weight: 800;
+        font-size: 35px;
+        color: var(--Verydarkblue);
+        font-family: "Fraunces", serif;
+        margin-bottom: 35px;
+    }
+
+    & p{
+        font-family: "Red Hat Display", sans-serif; 
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--Darkgrayishblue);
+        opacity: 0.8;
+        line-height: 22px;
+        margin-bottom: 25px;
+        padding-right: 35px;
+    }
+
+    & div{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        & h1{
+            color: var(--Darkcyan);
+            font-size: 35px;
+        }
+
+        & p{
+            padding-bottom: 10px;
+            text-decoration: line-through;
+        }
+    }
+
+    & button{
+        width: 245px;
+        height: 51px;
+        border: none;
+        font-family: "Red Hat Display", sans-serif; 
+        font-size: 14px;
+        font-weight: 800;
+        color: var(--White);
+        background-color: var(--Darkcyan);
+        border-radius: 10px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+        & i{
+            padding-right: 10px;
+        }
+    }
+}
+
+
+/* /////////////////////////////////////////////////// */
+
+@media (max-width: 260px) {
+
+    #main{
+        width: 90%;
+        height: 90%;
+        /* position: relative; */
+        display: flex;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    }
+
+    #boxleft{
+        width: 90%;
+        height: 50%;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        background-image: url(images/image-product-desktop.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    #boxright{
+        width: 90%;
+        height: 30%;
+        position: absolute;
+        top: 40%;
+        left: 5%;
+        background-color: var(--White);
+    
+    }
+
+    #textBox{
+        padding: 25px 35px;
+        & h3{
+            font-family: "Red Hat Display", sans-serif; 
+            color: var(--Darkgrayishblue);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    
+        & h1{
+            line-height: 35px;
+            font-weight: 800;
+            font-size: 25px;
+            color: var(--Verydarkblue);
+            font-family: "Fraunces", serif;
+            margin-bottom: 20px;
+        }
+    
+        & p{
+            font-family: "Red Hat Display", sans-serif; 
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--Darkgrayishblue);
+            opacity: 0.8;
+            line-height: 22px;
+            margin-bottom: 15px;
+            padding-right: 0px;
+        }
+    
+        & div{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+    
+            & h1{
+                color: var(--Darkcyan);
+                font-size: 25px;
+                margin: 0px;
+            }
+    
+            & p{
+                padding-bottom: 10px;
+                text-decoration: line-through;
+                margin: 2px;
+
+            }
+        }
+        & button{
+            width: 90%;
+            height: 51px;
+            border: none;
+            font-family: "Red Hat Display", sans-serif; 
+            font-size: 14px;
+            font-weight: 800;
+            margin-top: 5px;
+            color: var(--White);
+            background-color: var(--Darkcyan);
+            border-radius: 10px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    
+            & i{
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+
+    #main{
+        width: 90%;
+        height: 90%;
+        /* position: relative; */
+        display: flex;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    }
+
+    #boxleft{
+        width: 90%;
+        height: 50%;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        background-image: url(images/image-product-desktop.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    #boxright{
+        width: 90%;
+        height: 30%;
+        position: absolute;
+        top: 40%;
+        left: 5%;
+        background-color: var(--White);
+    
+    }
+
+    #textBox{
+        padding: 25px 35px;
+        & h3{
+            font-family: "Red Hat Display", sans-serif; 
+            color: var(--Darkgrayishblue);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    
+        & h1{
+            line-height: 35px;
+            font-weight: 800;
+            font-size: 25px;
+            color: var(--Verydarkblue);
+            font-family: "Fraunces", serif;
+            margin-bottom: 20px;
+        }
+    
+        & p{
+            font-family: "Red Hat Display", sans-serif; 
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--Darkgrayishblue);
+            opacity: 0.8;
+            line-height: 22px;
+            margin-bottom: 15px;
+            padding-right: 0px;
+        }
+    
+        & div{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+    
+            & h1{
+                color: var(--Darkcyan);
+                font-size: 25px;
+                margin: 0px;
+            }
+    
+            & p{
+                padding-bottom: 10px;
+                text-decoration: line-through;
+                margin: 2px;
+
+            }
+        }
+        & button{
+            width: 90%;
+            height: 51px;
+            border: none;
+            font-family: "Red Hat Display", sans-serif; 
+            font-size: 14px;
+            font-weight: 800;
+            margin-top: 5px;
+            color: var(--White);
+            background-color: var(--Darkcyan);
+            border-radius: 10px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    
+            & i{
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 460px) {
+
+    #main{
+        width: 90%;
+        height: 90%;
+        /* position: relative; */
+        display: flex;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    }
+
+    #boxleft{
+        width: 90%;
+        height: 50%;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        background-image: url(images/image-product-desktop.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    #boxright{
+        width: 90%;
+        height: 30%;
+        position: absolute;
+        top: 40%;
+        left: 5%;
+        background-color: var(--White);
+    
+    }
+
+    #textBox{
+        padding: 25px 35px;
+        & h3{
+            font-family: "Red Hat Display", sans-serif; 
+            color: var(--Darkgrayishblue);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    
+        & h1{
+            line-height: 35px;
+            font-weight: 800;
+            font-size: 25px;
+            color: var(--Verydarkblue);
+            font-family: "Fraunces", serif;
+            margin-bottom: 20px;
+        }
+    
+        & p{
+            font-family: "Red Hat Display", sans-serif; 
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--Darkgrayishblue);
+            opacity: 0.8;
+            line-height: 22px;
+            margin-bottom: 15px;
+            padding-right: 0px;
+        }
+    
+        & div{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+    
+            & h1{
+                color: var(--Darkcyan);
+                font-size: 25px;
+                margin: 0px;
+            }
+    
+            & p{
+                padding-bottom: 10px;
+                text-decoration: line-through;
+                margin: 2px;
+
+            }
+        }
+        & button{
+            width: 90%;
+            height: 51px;
+            border: none;
+            font-family: "Red Hat Display", sans-serif; 
+            font-size: 14px;
+            font-weight: 800;
+            margin-top: 5px;
+            color: var(--White);
+            background-color: var(--Darkcyan);
+            border-radius: 10px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    
+            & i{
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 560px) {
+
+    #main{
+        width: 90%;
+        height: 90%;
+        /* position: relative; */
+        display: flex;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    }
+
+    #boxleft{
+        width: 90%;
+        height: 50%;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        background-image: url(images/image-product-desktop.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    #boxright{
+        width: 90%;
+        height: 30%;
+        position: absolute;
+        top: 40%;
+        left: 5%;
+        background-color: var(--White);
+    
+    }
+
+    #textBox{
+        padding: 25px 35px;
+        & h3{
+            font-family: "Red Hat Display", sans-serif; 
+            color: var(--Darkgrayishblue);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    
+        & h1{
+            line-height: 35px;
+            font-weight: 800;
+            font-size: 25px;
+            color: var(--Verydarkblue);
+            font-family: "Fraunces", serif;
+            margin-bottom: 20px;
+        }
+    
+        & p{
+            font-family: "Red Hat Display", sans-serif; 
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--Darkgrayishblue);
+            opacity: 0.8;
+            line-height: 22px;
+            margin-bottom: 15px;
+            padding-right: 0px;
+        }
+    
+        & div{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+    
+            & h1{
+                color: var(--Darkcyan);
+                font-size: 25px;
+                margin: 0px;
+            }
+    
+            & p{
+                padding-bottom: 10px;
+                text-decoration: line-through;
+                margin: 2px;
+
+            }
+        }
+        & button{
+            width: 90%;
+            height: 51px;
+            border: none;
+            font-family: "Red Hat Display", sans-serif; 
+            font-size: 14px;
+            font-weight: 800;
+            margin-top: 5px;
+            color: var(--White);
+            background-color: var(--Darkcyan);
+            border-radius: 10px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    
+            & i{
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 660px) {
+
+    #main{
+        width: 90%;
+        height: 90%;
+        /* position: relative; */
+        display: flex;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    }
+
+    #boxleft{
+        width: 90%;
+        height: 50%;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        background-image: url(images/image-product-desktop.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    #boxright{
+        width: 90%;
+        height: 30%;
+        position: absolute;
+        top: 40%;
+        left: 5%;
+        background-color: var(--White);
+    
+    }
+
+    #textBox{
+        padding: 25px 35px;
+        & h3{
+            font-family: "Red Hat Display", sans-serif; 
+            color: var(--Darkgrayishblue);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    
+        & h1{
+            line-height: 35px;
+            font-weight: 800;
+            font-size: 25px;
+            color: var(--Verydarkblue);
+            font-family: "Fraunces", serif;
+            margin-bottom: 20px;
+        }
+    
+        & p{
+            font-family: "Red Hat Display", sans-serif; 
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--Darkgrayishblue);
+            opacity: 0.8;
+            line-height: 22px;
+            margin-bottom: 15px;
+            padding-right: 0px;
+        }
+    
+        & div{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+    
+            & h1{
+                color: var(--Darkcyan);
+                font-size: 25px;
+                margin: 0px;
+            }
+    
+            & p{
+                padding-bottom: 10px;
+                text-decoration: line-through;
+                margin: 2px;
+
+            }
+        }
+        & button{
+            width: 90%;
+            height: 51px;
+            border: none;
+            font-family: "Red Hat Display", sans-serif; 
+            font-size: 14px;
+            font-weight: 800;
+            margin-top: 5px;
+            color: var(--White);
+            background-color: var(--Darkcyan);
+            border-radius: 10px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    
+            & i{
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+
+
